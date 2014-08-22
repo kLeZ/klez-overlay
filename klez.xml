@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>                                                                                                     
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>klez</name>
+		<description>Personal Overlay from klez.</description>
+		<homepage>https://github.com/kLeZ/</homepage>
+		<owner>
+			<email>klez@protonmail.ch</email>
+		</owner>
+		<source type="git">git://github.com/kLeZ/klez-overlay.git</source>
+	</repo>
+</repositories>
