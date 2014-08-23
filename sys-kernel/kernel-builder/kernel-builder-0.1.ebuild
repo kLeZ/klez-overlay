@@ -10,13 +10,16 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="virtual/linux-sources"
+DEPEND="virtual/linux-sources[symlink]"
 
 src_configure() {
-	zcat /proc/config.gz > /usr/src/`eselect kernel list | awk '{print $2}' | tail -1`/.config
+	zcat /proc/config.gz > /usr/src/linux/.config
+	emake oldconfig
+	nonfatal emake modules_prepare
 }
 
 src_install() {
-	emake DESTDIR="${D}" modules_install
-	emake DESTDIR="${D}" install
+	nonfatal emake modules_install
+	nonfatal emake install
+	nonfatal grub2-mkconfig -o /boot/grub/grub.cfg
 }
