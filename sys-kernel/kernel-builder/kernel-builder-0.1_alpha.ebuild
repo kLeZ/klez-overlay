@@ -10,7 +10,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="virtual/linux-sources[symlink]"
+DEPEND="virtual/linux-sources[symlink]
+		!sys-freebsd/freebsd-sources"
 
 src_configure() {
 	zcat /proc/config.gz > /usr/src/linux/.config
