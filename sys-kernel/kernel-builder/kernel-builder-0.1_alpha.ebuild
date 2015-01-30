@@ -1,9 +1,9 @@
-# Copyright 2014 Alessandro Accardo
-# Distributed under the terms of the GNU General Public License v3
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=5
-DESCRIPTION="This package builds and installs the kernel source tree \"installed\" by [kernel]-sources portage package."
+DESCRIPTION="This package builds and installs the kernel source tree installed by [kernel]-sources package."
 HOMEPAGE="https://github.com/kLeZ/klez-overlay"
 
 LICENSE="GPL-3"
